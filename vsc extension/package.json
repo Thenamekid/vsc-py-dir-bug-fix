@@ -1,0 +1,34 @@
+{
+    "name": "fix-py-dir-problem",
+    "displayName": "Fix to py dir problem",
+    "description": "Fixes an issue with .py that it doesn't find other files in the same dir.",
+    "version": "1.0.0",
+    "publisher": "Thenamekid",
+    "engines": {
+      "vscode": "^1.58.0"
+    },
+    "categories": [
+      "Other"
+    ],
+    "icon": "display.png",
+    "activationEvents": [
+      "onCommand:extension.runPythonInTerminal"
+    ],
+    "contributes": {
+      "commands": [
+        {
+          "command": "extension.runPythonInTerminal",
+          "title": "Run Python in Terminal"
+        }
+      ]
+    },
+    "scripts": {
+      "vscode:prepublish": "npm run compile",
+      "compile": "tsc -p ./",
+      "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+      "typescript": "^4.4.2"
+    }
+  }
+  
